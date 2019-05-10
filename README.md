@@ -141,7 +141,7 @@ https://pip.pypa.io/en/stable/user_guide/#configuration
     $ pip config set global.require-virtualenv true
     # or:
     $ pip config set global.editor vim
-    $ pip config edit  # this lets us to edit the file %APPDATA%\pip\pip.ini
+    $ pip config edit  # this enables us to edit the file %APPDATA%\pip\pip.ini
     # appends:
     
     require-virtualenv = true
