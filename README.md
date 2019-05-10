@@ -28,7 +28,7 @@ $ pip install --user pipenv
 $ python -m site --user_base
 # output:
 # eg. ~/.local
-# then, we should add ~/.local/bin to PATH. (need to edit file ~/.bashrc)
+# then, we should add ~/.local/bin to PATH. (need to edit the file ~/.bashrc)
 
 # for Windows:
 $ py -m site --user_base
@@ -36,11 +36,45 @@ $ py -m site --user_base
 # eg. C:\Users\Username\AppData\Roaming\Python37\site-packages
 # then, we should add C:\Users\Username\AppData\Roaming\Python37\Scripts to PATH.
 ```
-- Running on pipenv
+- Running on `pipenv`
 ```
 # install package on pipenv
 $ pipenv install packagename
 
 # running on pipenv
 $ pipenv run python main.py
+```
+- Install package `virtualenv`
+```
+$ pip install virtualenv
+```
+- Create a new project with `virtualenv`
+```
+$ virtualenv new_project
+$ cd new_project
+# then, we should set C:\Program Files\Python37\python.exe as VIRTUALENVWRAPPER_PYTHON
+# activate the virtual env
+$ source Scripts\activate[.bat]
+# deactivate the virtual env
+$ Scripts\deactivate.bat
+```
+- Running on `virtualenv`
+```
+# install package requests
+$ pip install requests
+# 'freeze' the current state of the environment packages
+$ pip freeze > requirements.txt
+# restore or reoccur the frozen environment according to the requirements.txt
+$ pip install -r requirements.txt
+```
+- Install package `virtualenvwrapper`
+```
+# for Linux or MacOS:
+$ pip install virtualenvwrapper
+$ export WORKON_HOME=~/Envs  # or, we can add this line in the file ~/.bashrc
+$ source /usr/local/bin/virtualenvwrapper.sh
+
+# for Windows:
+$ pip install virtualenvwrapper-win
+# then, we should set %USERPROFILE%\Envs as WORKON_HOME
 ```
