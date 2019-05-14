@@ -53,10 +53,12 @@ $ pip install virtualenv
 $ virtualenv new_project
 $ cd new_project
 # then, we should set C:\Program Files\Python37\python.exe as VIRTUALENVWRAPPER_PYTHON
-# activate the virtual env
+# activate the virtual env:
 $ source Scripts\activate[.bat]
-# deactivate the virtual env
+# deactivate the virtual env:
 $ Scripts\deactivate.bat
+# or, simply this way:
+$ deactivate
 ```
 - Running on `virtualenv`
 ```
@@ -147,6 +149,8 @@ https://pip.pypa.io/en/stable/user_guide/#configuration
     require-virtualenv = true
     
     # Esc & ZZ, save the file and quit.
+    # And then, deactivate:
+    $ deactivate
     
     ```
     - Caching packages for future use
